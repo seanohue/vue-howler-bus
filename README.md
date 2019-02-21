@@ -1,6 +1,8 @@
 # Vue Howler Bus
 
-An audio engine plugin for Vue, based on Howler JS and an application-wide event bus. Originally made for an HTML5 game engine, could also be used for other HTML5 multimedia experiences.
+An audio engine plugin for Vue, based on [Howler JS](https://howlerjs.com/) and an application-wide [event bus](https://github.com/fffixed/vue-bus). Originally made for an HTML5 game engine, could also be used for other HTML5 multimedia experiences.
+
+*disclaimer* This is an early version of this plugin and the API is thus incomplete and subject to change.
 
 ## Set up
 
@@ -98,3 +100,11 @@ The following methods are public and available via `this.$audio.methodName` in a
 - `playAll` : Begins replaying the ambient and music tracks that were last played.
 - `eachPlayer(cb)` : Executes the function `cb` on the ambient, music, and sfx players. The `cb` is passed two arguments, the first one being the Howler instance used for that type, the second being a string describing the type (which can be 'sfx', 'music', or 'ambience').
 - `emitSettings` : Another way to get the player to emit its settings via the event bus.
+
+## Players
+
+In addition to the above APIs, it is possible to grab the Howler instances directly, by accessing `this.$audio.sfx`, `this.$audio.music` or `this.$audio.ambient`. Please see the [HowlerJS API](https://github.com/goldfire/howler.js#documentation) for more information.
+
+If you find yourself doing this a lot for your use cases, please submit an issue or PR, as the intent of this plugin is to make a friendly, event-based API around multiple Howler instances.
+
+Thanks!
