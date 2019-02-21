@@ -1,0 +1,25 @@
+{
+  "name": "vue-howler-bus",
+  "version": "0.1.0",
+  "description": "An audio engine Vue plugin based on Howler and an EventEmitter model",
+  "main": "plugin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "audio",
+    "vue",
+    "plugin",
+    "vuejs",
+    "howlerjs",
+    "sound",
+    "sfx",
+    "music",
+    "player"
+  ],
+  "author": "Sean O'Donohue",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
