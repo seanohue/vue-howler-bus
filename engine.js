@@ -104,9 +104,6 @@ export class AudioEngine {
 
     return initTrack()
       .then(src => {
-        if (!src) {
-          return;
-        }
         return new this.Howl({
           src: [src],
           loop: player !== 'sfx',
