@@ -41,7 +41,7 @@ export class AudioEngine {
   }
 
   processTrack (track) {
-    track.fetch = () => import(`@/assets/${track.name}.ogg`)
+    track.fetch = () => import(`@/assets/${track.name}`)
     return track
   }
 
@@ -80,8 +80,8 @@ export class AudioEngine {
       })
   }
 
-  findTrack (trackname) {
-    return find(this.tracks, {name: trackname})
+  findTrack (name) {
+    return find(this.tracks, {name})
   }
 
   findInitial (type) {
