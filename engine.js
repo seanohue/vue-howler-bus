@@ -92,7 +92,7 @@ export class AudioEngine {
   createPlayer (player, track) {
     if (!track) {
       track = {
-        fetch: () => Promise.resolve(null)
+        fetch: () => Promise.resolve({default: null})
       }
     }
 
