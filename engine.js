@@ -101,7 +101,7 @@ export class AudioEngine {
       : () => track.fetch().then(imported => imported.default)
 
     const currentlyMuted = get(this, 'settings.muted', false)
-
+    const logError = bind(this.logError, this)
     return initTrack()
       .then(src => {
         return new this.Howl({
@@ -112,10 +112,10 @@ export class AudioEngine {
           rate: track.rate || 1,
           volume: track.volume || this.getVolume(player),
           onloaderror (id, err) {
-            return this.logError(player, `LoadError: ${id} -- ${err}`)
+            return logError(player, `LoadError: ${id} -- ${err}`)
           },
           onplayerror (id, err) {
-            return this.logError(player, `PlayError: ${id} -- ${err}`)
+            return logError(player, `PlayError: ${id} -- ${err}`)
           }
         })
       })
