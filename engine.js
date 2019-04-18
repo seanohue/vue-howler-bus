@@ -41,7 +41,7 @@ export class AudioEngine {
   }
 
   processTrack (track) {
-    track.fetch = () => import(`@/assets/${track.name}.${this.extension || 'ogg'}`)
+    track.fetch = () => import(`@/assets/${track.name}.${track.extension || this.extension || 'ogg'}`)
     return track
   }
 
