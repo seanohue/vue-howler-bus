@@ -54,7 +54,7 @@ export class AudioEngine {
   }
 
   initAmbient () {
-    const initial = this.findTrack('tubestatic')
+    const initial = this.findInitial('ambient')
     return this.createPlayer('ambient', initial)
       .then(howl => {
         this.ambient = howl
@@ -63,7 +63,7 @@ export class AudioEngine {
   }
 
   initMusic () {
-    const initial = this.findTrack('VESSELACCESS')
+    const initial = this.findInitial('music')
     return this.createPlayer('music', initial)
       .then(howl => {
         this.music = howl
@@ -72,7 +72,7 @@ export class AudioEngine {
   }
 
   initSfx () {
-    const initial = this.findTrack('osstart')
+    const initial = this.findInitial('sfx')
     return this.createPlayer('sfx', initial)
       .then(howl => {
         this.sfx = howl
@@ -84,7 +84,18 @@ export class AudioEngine {
     return find(this.tracks, {name: trackname})
   }
 
+  findInitial (type) {
+    const ofType = filter(this.tracks, {type})
+    return find(ofType, {initial: true}) || ofType[0];
+  }
+
   createPlayer (player, track) {
+    if (!track) {
+      track = {
+        fetch: () => Promise.resolve(null)
+      }
+    }
+
     const initTrack = track.src
       ? bind(Promise.resolve, Promise, track.src)
       : () => track.fetch().then(imported => imported.default)
@@ -93,6 +104,9 @@ export class AudioEngine {
 
     return initTrack()
       .then(src => {
+        if (!src) {
+          return;
+        }
         return new this.Howl({
           src: [src],
           loop: player !== 'sfx',
