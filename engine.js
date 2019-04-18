@@ -35,13 +35,13 @@ export class AudioEngine {
   }
 
   setupTracks () {
-    const processTracks = partialRight(map, this.processTrack)
+    const processTracks = partialRight(map, bind(this.processTrack, this))
     this.tracks = processTracks(this.tracks)
     return this.tracks
   }
 
   processTrack (track) {
-    track.fetch = () => import(`@/assets/${track.name}`)
+    track.fetch = () => import(`@/assets/${track.name}.${this.extension || 'ogg'}`)
     return track
   }
 
