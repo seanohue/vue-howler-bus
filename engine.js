@@ -41,15 +41,13 @@ export class AudioEngine {
   }
 
   processTrack (track) {
-    track.fetch = () => {
-      try {
-        return import(`@/assets/${track.name}.${track.extension || this.extension || 'ogg'}`)
-      }  catch (e) {
+    track.fetch = () => 
+      import(`@/assets/${track.name}.${track.extension || this.extension || 'ogg'}`)
+        .catch(e => {
         this.logError('SYSTEM', `Initial load failed for ${track.name}`)
         return import(`@/assets/${this.getPlaceholder(track)}`)
-      }
-    }
-    return track
+      })
+    return track;
   }
 
   getPlaceholder({type = 'sfx'}) {
