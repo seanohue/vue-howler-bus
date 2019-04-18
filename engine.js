@@ -193,7 +193,7 @@ export class AudioEngine {
   playTrack (player, trackname) {
     const track = this.findTrack(trackname)
     if (!track) {
-      return this.logError(player, `TrackNotFoundError: ${trackname}}`)
+      return this.logError(player, `TrackNotFoundError: ${trackname}`)
     }
     if (!this[player]) {
       return this.logError(player, `PlayerNotFoundError: ${player} uninitialized`)
