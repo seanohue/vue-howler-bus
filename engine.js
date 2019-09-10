@@ -112,7 +112,7 @@ export class AudioEngine {
 
   initSettings () {
     this.settings = {
-      muted: false,
+      muted: true,
       musicVolume: 1,
       sfxVolume: 1,
       ambientVolume: 1
