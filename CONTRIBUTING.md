@@ -1,4 +1,4 @@
-<!-- omit in toc -->
+
 # Contributing to vue-howler-bus
 
 First off, thanks for taking the time to contribute! ❤️
@@ -12,7 +12,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 > - Refer this project in your project's readme
 > - Mention the project at local meetups and tell your friends/colleagues
 
-<!-- omit in toc -->
+
 ## Table of Contents
 
 - [Code of Conduct](#code-of-conduct)
@@ -29,9 +29,9 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 ## Code of Conduct
 
 This project and everyone participating in it is governed by the
-[Code of Conduct].
+[Code of Conduct](./CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report unacceptable behavior
-to <>.
+to [@seanohue](https://github.com/seanohue).
 
 ## I Have a Question
 
@@ -46,7 +46,7 @@ We will then take care of the issue as soon as possible.
 
 ## I Want To Contribute
 
-> ### Legal Notice <!-- omit in toc -->
+> ### Legal Notice
 
 > When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project license.
 
@@ -92,7 +92,6 @@ Once it's filed:
 
 This section guides you through submitting an enhancement suggestion for Torus, **including completely new features and minor improvements to existing functionality**. Following these guidelines will help maintainers and the community to understand your suggestion and find related suggestions.
 
-<!-- omit in toc -->
 #### Before Submitting an Enhancement
 
 - Make sure that you are using the latest version.
@@ -100,29 +99,23 @@ This section guides you through submitting an enhancement suggestion for Torus, 
 - Perform a [search](https://github.com/seanohue/vue-howler-bus/issues) to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.
 - Find out whether your idea fits with the scope and aims of the project. It's up to you to make a strong case to convince the project's developers of the merits of this feature. Keep in mind that we want features that will be useful to the majority of our users and not just a small subset. If you're just targeting a minority of users, consider writing an add-on/plugin library.
 
-
 ### Your First Code Contribution
 
-Fork the repository. 
+Fork the repository.
 
 ```
-
 - git clone <your-forked-repo-link>
--git checkout -b <appropiate branch name>
-
-
+-git checkout -b <appropriate branch name>
 
 ```
 
 ### Improving The Documentation
 <!-- TODO
 Updating, improving and correcting the documentation
-
 -->
 
 1. follow the indentations
-2. use appropiate variable names to make your code readable.
-
+2. use appropriate variable names to make your code readable.
 
 ## Styleguides
 
@@ -130,19 +123,24 @@ Updating, improving and correcting the documentation
 <!-- TODO
 
 -->
+```
+(for a single file)
 -git add <filename>
 (for multiple files)
 -git add . or -git add -A
+
 -git commit -s -m "message"
 -git push -u origin <your-branch-name>
+```
+
+Note : Always remember to signoff your commit before pushing your code(contribution to the repository).
+
 ## Join The Project Team
-<!-- TODO -->
 
-<!-- omit in toc -->
+Feel free to ask the maintainer to assign you to an open issue and hence join the team.
 
-feel free to ask the maintainer in the issue comment section to for the issue and hence joining the team. 
 ## Attribution
 
 This guide is based on the **contributing-gen**. [Make your own](https://github.com/bttger/contributing-gen)!
 
-Note : The document is adapted from [Torus](https://github.com/torus-online/torus/blob/master/CONTRIBUTING.MD).
+Note: The document is adapted from [Torus](https://github.com/torus-online/torus/blob/master/CONTRIBUTING.MD).
