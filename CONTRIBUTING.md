@@ -135,6 +135,12 @@ Updating, improving and correcting the documentation
 
 Note : Always remember to signoff your commit before pushing your code(contribution to the repository).
 
+``` 
+git commit -s -m "message"
+
+``` 
+**-s is used to signoff your commits**
+
 ## Join The Project Team
 
 Feel free to ask the maintainer to assign you to an open issue and hence join the team.
