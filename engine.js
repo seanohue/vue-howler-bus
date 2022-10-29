@@ -41,7 +41,8 @@ export class AudioEngine {
   }
 
   processTrack (track) {
-    track.fetch = () => import(`@/assets/${track.name}.ogg`)
+    // If no extension is defined, we assume that the extension is included in the name:
+    track.fetch = () => import(`@/assets/${track.name}${track.ext || ''}`)
     return track
   }
 
